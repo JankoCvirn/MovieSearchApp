@@ -12,6 +12,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.cvirn.moviesearch.ui.theme.MovieSearchTheme
+import com.cvirn.moviesearch.viewmodel.HomeViewModel
+import org.koin.androidx.compose.koinViewModel
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,6 +37,8 @@ fun Greeting(
     name: String,
     modifier: Modifier = Modifier,
 ) {
+    val viewModel: HomeViewModel = koinViewModel()
+
     Text(
         text = "Hello $name!",
         modifier = modifier,

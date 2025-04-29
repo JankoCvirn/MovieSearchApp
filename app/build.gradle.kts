@@ -38,6 +38,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
 }
 
@@ -78,7 +79,6 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     // Modules
-
     implementation(project(":data"))
     implementation(project(":domain"))
 }
